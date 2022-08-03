@@ -11,20 +11,22 @@ In this challenge you will analyze datasets that contain the time evolution of t
 
 1. Dataset
 * Dataset can be found [here](data). Dataset provided should be treated as confidential, and should not be distributed.
-* Each .csv file corresponds to an indiidual test.
-* Each file contains one column with the respiratory rate with a sample time of 6 samples per minute.
-* Each filename contains metadata information with the real VT1 & VT2 times and R alongside the level of noise of the signal.
+* Each .csv file corresponds to an individual ramp test.
+* Each file contains one column with the respiratory rate 
+* THe respiratory rate has a sample rate of 6 samples per minute.
+* Each filename contains metadata information with the noise level of the signal, and the real VT1 & VT2 times & respiratory rate.
 
-2. Regression analysis
+1. Regression analysis
 * Implement a segmented regression function: datasets are expected to follow a piecewise-linear (3-segment) trend. To this end, you have to write a function that solves the 3-segment regression. For more info about segmented regression, see this [link](https://en.wikipedia.org/wiki/Segmented_regression) 
-* The function should return the fitted model constants ($VT_1 [s],RR_{VT_1}[bpm],VT_2 [s],RR_{VT_2}[bpm]$) and the three correlation coefficients $R_1^2,R_2^2,R_3^2$. 
+* The function should return the fitted model constants $VT_1 [s],RR_{VT_1}[bpm],VT_2 [s],RR_{VT_2}[bpm]$ and the three correlation coefficients $R_1^2,R_2^2,R_3^2$. 
   
 3. Performance Validation
 * Validate your function against the metadata of each example
 * Analyze how the model performs across different levels of noise
 
-1. Results presentation
+4. Results presentation
 * Plot RR [bpm] vs time for both data and model, for the two best and two worst cases
+* Generate statistics of bias, precision and accuracy of the model for each noise level and the complete dataset.
 * Generate a histogram for the VT1 and VT2 distributions, indicating in the plot the mean, median, and standard devation for the sample group 
 * Report in a plot the $R_1^2,R_2^2,R_3^2$ for each subject (x-data: subject number, y-data: correlation coefficients)
 * Be thoughful about visual aspects of the plots such as choice of colors, font size, title and axis lables, legends, etc. Do not include redundant information, be clear and concise. 
