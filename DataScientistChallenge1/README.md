@@ -13,7 +13,7 @@ In this challenge you will analyze datasets that contain the time evolution of t
 * Dataset can be found [here](data). Dataset provided should be treated as confidential, and should not be distributed.
 * Each .csv file corresponds to an individual ramp test.
 * Each file contains one column with the respiratory rate 
-* THe respiratory rate has a sample rate of 6 samples per minute.
+* The respiratory rate has a sample rate of 6 samples per minute.
 * Each filename contains metadata information with the noise level of the signal, and the real VT1 & VT2 times & respiratory rate.
 
 2. Model building: segmented regression analysis
@@ -21,11 +21,11 @@ In this challenge you will analyze datasets that contain the time evolution of t
 * Your function should return the fitted model parameters $VT_1 [s],RR_{VT_1}[bpm],VT_2 [s],RR_{VT_2}[bpm]$ and the three correlation coefficients $R_1^2,R_2^2,R_3^2$. 
   
 3. Model validation: performance assessment
-* For each noise level, compute the bias, precision, accuracy, and Pearson coefficients of the predicted parameters $VT_1 [s],RR_{VT_1}[bpm],VT_2 [s],RR_{VT_2}[bpm]$. For a definition of these performance metrics, you may consult this [paper](https://ieeexplore.ieee.org/abstract/document/9296762)
+* For each noise level, compute the bias, precision, accuracy, and Pearson coefficients of the predicted parameters $VT_{1} [s],RR_{VT_1}[bpm],VT_{2} [s],RR_{VT_2}[bpm]$. For a definition of these performance metrics, you may consult this [paper](https://ieeexplore.ieee.org/abstract/document/9296762)
 
 4. Present your results
 * Choosing the best and worst cases for each noise level, plot RR [bpm] vs time
-* Plot histograms for RR_{VT_1} and RR_{VT_2}, indicating in the plot the mean, median, and standard devation for the sample group 
+* Plot histograms for $RR_{VT_1}$ and $RR_{VT_2}$, indicating in the plot the mean, median, and standard devation for the sample group 
 * Report in a plot the $R_1^2,R_2^2,R_3^2$ for each subject (x-data: subject number, y-data: correlation coefficients)
 * For each parameter, construct a single plot with bias, precision, and accuracy vs noise level. 
 * Be thoughful about visual aspects of the plots such as choice of colors, font size, title and axis lables (always include units!), legends, etc. Do not include redundant information, be clear and concise. 
